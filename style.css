@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.video-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: black;
+}
+video {
+  height: 100%;
+  width: 100%;
+}
+
+#record,
+#capture {
+  position: fixed;
+  /* in position fixed, hmesha body ke position ke about krnege modifications */
+  right: 2rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  background-color: black;
+  border: 5px solid white;
+  /* border: none; */
+  z-index: 2;
+}
+#record {
+  top: 40vh;
+}
+#capture {
+  top: 50vh;
+}
+
+#record div,
+#capture div {
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+#record div {
+  background-color: red;
+}
+#capture div {
+  background-color: white;
+}
+
+#record,
+#capture:hover {
+  cursor: pointer;
+}
+
+.capture-animation {
+  animation: inOut infinite 0.5s;
+  /* shutter like animation which runs for 0.5 s */
+}
+.record-animation {
+  animation: inOut infinite 1s;
+  /* shutter like animation which runs infinitely */
+}
+
+@keyframes inOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#filter-container {
+  position: fixed;
+  margin-left: 2rem;
+  top: 20vh;
+  height: 60vh;
+  width: 8rem;
+  background-color: black;
+  z-index: 2;
+  /* adding filter */
+}
+
+.filter-item {
+  height: calc(60vh / 6);
+  width: 100%;
+  border: 2px solid white;
+  background: url(fil.jpeg);
+  /*  using image as  a background*/
+  background-size: cover;
+  /* image ko pura fit krne ke liye humne image ko bola ki div ko cover krle */
+  background-blend-mode: overlay;
+  /* background color ko merge krne ke liye background blend use kiya hai */
+}
+.zoom-container {
+  position: fixed;
+  top: 15vh;
+  height: 8rem;
+  width: 4rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.zoom-container div {
+  height: 50%;
+  width: 100%;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  /* border: 2px white solid ; */
+  background-color: #787f8df9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-div {
+  z-index: 1;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+.filter-item:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.filter-item.selected {
+  border: 4px solid rgb(11, 193, 11);
+}
+
+#gallery-icon {
+  position: fixed;
+  bottom: 15vh;
+  right: 2rem;
+  background-color: #787f8df9;
+  width: 4rem;
+  height: 4rem;
+  padding: 3px;
+  font-size: 3.5rem;
+  color: white;
+  z-index: 3;
+}
+#gallery-icon:hover {
+  background-color: black;
+  cursor: pointer;
+}
+.zoom-container div:hover {
+  background-color: black;
+  cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="filter-container">
+      <div class="filter-item" style="background-color: #e3b1b152"></div>
+      <div class="filter-item" style="background-color: #5a97a426"></div>
+      <div class="filter-item" style="background-color: #7d65219f"></div>
+      <div class="filter-item" style="background-color: #ff9e434e"></div>
+      <div class="filter-item" style="background-color: #3f4e3749"></div>
+      <div class="filter-item selected" id="default-filter"></div>
+    </div>
+
+    <div class="video-container">
+      <video autoplay controls style="transform: scale(1)"></video>
+      <!-- autoplay - jaise hi video ko source milta hai voh usko  -->
+      <!-- play krdeta hai bina play button press kiye -->
+      <!-- controls - humme media control ke options provide krti - like fullscreen, audio, seek -->
+      <!-- <audio autoplay controls></audio> -->
+    </div>
+
+    <div class="zoom-container">
+      <div class="zoom-in">+</div>
+      <!-- <div class="material-icons zoom-in" id="gallery-icon">zoom_in</div> -->
+      <div class="zoom-out">-</div>
+    </div>
+    <button id="record"><div></div></button>
+    <button id="capture"><div></div></button>
+
+    <div class="gallery">
+      <div class="material-icons" id="gallery-icon">collections</div>
+    </div>
+    <script src="dbScript.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            /* so that scrollbars are not visible */
+        }
+    </style>
+</head>
+
+<body>
+    <canvas></canvas>
+    <!-- canvas is used to draw on html documents -->
+
+    <script>
+
+        let canvas = document.querySelector("canvas");
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        //providing entire body to the canvas
+
+        let ctx = canvas.getContext("2d");
+        // used to create drawing context - bracket mein btate ki kis type ki drawing hai
+
+        // ctx.beginPath();
+        // // isse hmesha start krte hain
+
+        // ctx.moveTo(100, 200);
+        // // draw krne se pehle initial position par jana pdta hai
+
+        // ctx.lineTo(500, 400);
+        // // isse line bnti hai
+
+        // ctx.lineWidth = 20
+        // // change line width
+
+        // ctx.strokeStyle = "blue";
+        // // change line color
+
+        // ctx.stroke();
+        // // isse line user ko visible hoti and iske baad dubara se initialise krna pdta sab
+
+        // ctx.beginPath();
+        // ctx.moveTo(500, 400);
+        // ctx.lineTo(800, 100);
+        // ctx.strokeStyle = "red";
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.strokeStyle = "purple"
+        // ctx.lineWidth = 15
+        // ctx.strokeRect(50, 50, 100, 200);
+        // // isko use krke rect draw kr skte - starting points, width, height pass krte hain
+        // // baaki properties ko bhi modify kr skte
+        // // automatically stroke hojata
+
+        // ctx.fillStyle = "green";
+        // //fill color change krne ke liye
+
+        // ctx.fillRect(200, 200, 80, 30);
+        // // rectangle banakr color fill kr skte
+
+        
+        let img = document.createElement("img");
+        // image tag banakr usko canvas par load krni hai
+
+        img.src = "img.jpeg";
+
+        img.addEventListener("load", function(){
+            // image ke load hone ka wait krna pdega before canvas can draw it
+
+            ctx.drawImage(img,0,0,200,300);
+            // image ko 0,0 se start krke itni height and width dere
+        });
+
+    </script>
+</body>
+
+</html>
