@@ -120,11 +120,6 @@ video {
   justify-content: center;
 }
 
-
-.zoom-container div:hover{
-  border: 2px solid whitesmoke;
-}
-
 .filter-div {
   z-index: 1;
   top: 0;
@@ -156,8 +151,10 @@ video {
 #gallery-icon:hover {
   background-color: black;
   cursor: pointer;
+  border: 2px solid whitesmoke;
 }
 .zoom-container div:hover {
   background-color: black;
   cursor: pointer;
+  border: 2px solid whitesmoke;
 }
