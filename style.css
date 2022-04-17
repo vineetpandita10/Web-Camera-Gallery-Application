@@ -19,7 +19,7 @@ video {
 #capture {
   position: fixed;
   /* in position fixed, hmesha body ke position ke about krnege modifications */
-  right: 2rem;
+  right: 5.5rem;
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 50%;
@@ -32,7 +32,7 @@ video {
   top: 40vh;
 }
 #capture {
-  top: 50vh;
+  top: 53vh;
 }
 
 #record div,
@@ -77,7 +77,7 @@ video {
 
 #filter-container {
   position: fixed;
-  margin-left: 2rem;
+  margin-left: 3rem;
   top: 20vh;
   height: 60vh;
   width: 8rem;
@@ -102,7 +102,7 @@ video {
   top: 15vh;
   height: 8rem;
   width: 4rem;
-  right: 2rem;
+  right: 6rem;
   z-index: 2;
 }
 
@@ -114,7 +114,7 @@ video {
   font-weight: bold;
   text-align: center;
   /* border: 2px white solid ; */
-  background-color: #787f8df9;
+  background-color: #000000f9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,8 +139,8 @@ video {
 #gallery-icon {
   position: fixed;
   bottom: 15vh;
-  right: 2rem;
-  background-color: #787f8df9;
+  right: 5.7rem;
+  background-color: #000000f9;
   width: 4rem;
   height: 4rem;
   padding: 3px;
