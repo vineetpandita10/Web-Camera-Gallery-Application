@@ -119,6 +119,10 @@ video {
   align-items: center;
   justify-content: center;
 }
+#gallery-icon:hover,
+.zoom-container div:hover{
+  border: 2px solid whitesmoke;
+}
 
 .filter-div {
   z-index: 1;
